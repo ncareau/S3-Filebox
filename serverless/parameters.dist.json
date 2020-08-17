@@ -1,0 +1,9 @@
+[
+  "S3FileBoxClientHostName=http://localhost",
+  "S3FileBoxPublicKey=MyKey",
+  "S3FileBoxSecretKey=MySecret",
+  "S3FileBoxBucketName=s3fileboxbucket",
+  "S3FileBoxMinSize=-1",
+  "S3FileBoxMaxSize=-1"
+]
+

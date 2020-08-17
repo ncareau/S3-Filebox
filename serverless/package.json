@@ -1,0 +1,39 @@
+{
+  "name": "s3filebox-serverless",
+  "version": "0.0.2",
+  "description": "Lambda backend for s3filebox.",
+  "main": "lambda.js",
+  "config": {
+    "s3LambdaBucketName": "s3filebox-dev-lambda",
+    "region": "ca-central-1",
+    "cloudFormationStackName": "S3FileboxStack",
+    "accountId": "095238232417"
+  },
+  "scripts": {
+    "start": "node app.local.js",
+    "config": "node ./scripts/configure.js",
+    "deconfig": "node ./scripts/deconfigure.js",
+    "local": "node scripts/local",
+    "package": "aws cloudformation package --template ./cloudformation.yaml --s3-bucket $npm_package_config_s3LambdaBucketName --output-template packaged-sam.yaml --region $npm_package_config_region",
+    "deploy": "aws cloudformation deploy --template-file packaged-sam.yaml --stack-name $npm_package_config_cloudFormationStackName --capabilities CAPABILITY_IAM --region $npm_package_config_region",
+    "package-deploy": "npm run package && npm run deploy",
+    "delete-stack": "aws cloudformation delete-stack --stack-name $npm_package_config_cloudFormationStackName --region $npm_package_config_region",
+    "setup": "npm install && npm run package-deploy",
+    "win-config": "npm run config",
+    "win-deconfig": "npm run deconfig",
+    "win-local": "npm run local",
+    "win-package": "aws cloudformation package --template ./cloudformation.yaml --s3-bucket %npm_package_config_s3LambdaBucketName% --output-template packaged-sam.yaml --region %npm_package_config_region%",
+    "win-deploy": "aws cloudformation deploy --template-file packaged-sam.yaml --stack-name %npm_package_config_cloudFormationStackName% --capabilities CAPABILITY_IAM --region %npm_package_config_region% --parameter-overrides file://./parameters.json",
+    "win-package-deploy": "npm run win-package && npm run win-deploy",
+    "win-delete-stack": "aws cloudformation delete-stack --stack-name %npm_package_config_cloudFormationStackName% --region %npm_package_config_region%",
+    "win-setup": "npm install && npm run win-package-deploy"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-serverless-express": "^3.0.0",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "crypto-js": "^3.1.9-1"
+  }
+}

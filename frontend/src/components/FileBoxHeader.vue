@@ -3,19 +3,19 @@
     <div class="card-header" v-if="boxId" :style="boxHeaderStyle">
 
             <span class="boxTitle">
-                <router-link :to="{name: 'box', params: {id: boxId}}"><span class="text-muted"><i
-                        class="fa fa-link"></i></span> /box/{{ boxId }}</router-link>
+                <router-link :to="{name: 'box', params: {id: boxId}}"><span class="text-muted"><em
+                        class="fa fa-link"></em></span> /box/{{ boxId }}</router-link>
             </span>
 
         <span class="float-right" v-if="!newBox">
-                <button class="btn btn-primary btn-sm" title="Copy to clipboard" v-clipboard="boxUrl"><i
-                        class="fa fa-clipboard"></i></button>
+                <button class="btn btn-primary btn-sm" title="Copy to clipboard" v-clipboard="boxUrl"><em
+                        class="fa fa-clipboard"></em></button>
                 <button class="btn btn-primary btn-sm" title="Qr Code"
-                        v-on:click="$modal.show('qrcode-modal', { boxUrl: boxUrl })"><i
-                        class="fa fa-qrcode"></i></button>
+                        v-on:click="$modal.show('qrcode-modal', { boxUrl: boxUrl })"><em
+                        class="fa fa-qrcode"></em></button>
                 <button class="btn btn-primary btn-sm" title="Send an email"
-                        v-on:click="$modal.show('email-modal', { boxUrl: boxUrl })"><i
-                        class="fa fa-envelope-o"></i></button>
+                        v-on:click="$modal.show('email-modal', { boxUrl: boxUrl })"><em
+                        class="fa fa-envelope-o"></em></button>
         </span>
 
         <span  class="float-right" v-if="newBox">

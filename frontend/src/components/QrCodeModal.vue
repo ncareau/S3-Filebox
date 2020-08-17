@@ -2,7 +2,7 @@
     <modal name="qrcode-modal" :width="400" :height="450" :adaptive="true">
         <div class="modal-content">
             <div class="modal-body text-center">
-                <img width="350" id="qrimg" :src="computeQRCode">
+                <img width="350" id="qrimg" :src="computeQRCode" alt="QR Code">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" v-on:click="$modal.hide('qrcode-modal')">Close</button>

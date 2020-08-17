@@ -2,6 +2,8 @@ This project is in the proof of concept stage. It is missing critical functional
 
 # S3-Filebox
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ncareau_S3-Filebox&metric=alert_status)](https://sonarcloud.io/dashboard?id=ncareau_S3-Filebox)
+
 This is a combination of a Frontend made in vuejs and a backend for AWS Serverless Nodejs. It is an application to easily share files using a virtual "box". 
 
 <br/>

@@ -27,12 +27,12 @@
         <div class="card-body" v-if="files.length > 1">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" v-for="file in files">
-                    <i class="fa fa-file-archive-o"></i>&nbsp;&nbsp; {{ file.name }}
+                    <em class="fa fa-file-archive-o"></em>&nbsp;&nbsp; {{ file.name }}
                     <span class="float-right">
                             <span class="text-muted">Size</span> : {{ file.size | prettyBytes }} &nbsp;
-                            <button class="btn btn-sm btn-success" v-on:click="getFile(boxId,file.id)"><i
-                                    class="fa fa-download"></i> Download</button>
-                            <button class="btn btn-sm btn-outline-danger"><i class="fa fa-times"></i></button>
+                            <button class="btn btn-sm btn-success" v-on:click="getFile(boxId,file.id)"><em
+                                    class="fa fa-download"></em> Download</button>
+                            <button class="btn btn-sm btn-outline-danger"><em class="fa fa-times"></em></button>
                         </span>
                 </li>
             </ul>
@@ -40,20 +40,20 @@
 
         <!-- Single File -->
         <div class="card-body text-center" v-if="files.length == 1">
-            <h2><i class="fa fa-file"></i></h2>
+            <h2><em class="fa fa-file"></em></h2>
             <h2 class="card-title">{{ singleFile.name }}a</h2>
             <div>
                 <span class="text-muted">Size</span> : {{ singleFile.size | prettyBytes }}  &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-sm btn-success" v-on:click="getFile(boxId,singleFile.id)"><i
-                        class="fa fa-download"></i> Download
+                <button class="btn btn-sm btn-success" v-on:click="getFile(boxId,singleFile.id)"><em
+                        class="fa fa-download"></em> Download
                 </button>
             </div>
         </div>
 
         <div class="card-body" v-if="!newBox">
             <div class="text-center">
-                <button v-on:click="showDropBox = !showDropBox" class="btn btn-outline-success btn-sm"><i
-                        class="fa fa-plus"></i> Add files
+                <button v-on:click="showDropBox = !showDropBox" class="btn btn-outline-success btn-sm"><em
+                        class="fa fa-plus"></em> Add files
                 </button>
             </div>
         </div>

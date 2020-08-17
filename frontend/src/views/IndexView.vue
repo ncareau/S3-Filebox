@@ -28,8 +28,8 @@
         </div>
 
         <div class="text-center" style="margin:20px;">
-            <button class="btn btn-outline-primary"><i class="fa fa-plus"></i> New FileBox</button>
-            <button class="btn btn-outline-primary"><i class="fa fa-plus"></i> <i class="fa fa-lock"></i> New encrypted FileBox </button>
+            <button class="btn btn-outline-primary"><em class="fa fa-plus"></em> New FileBox</button>
+            <button class="btn btn-outline-primary"><em class="fa fa-plus"></em> <em class="fa fa-lock"></em> New encrypted FileBox </button>
         </div>
     </div>
 </template>

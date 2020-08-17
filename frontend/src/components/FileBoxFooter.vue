@@ -8,8 +8,8 @@
             <span class="text-muted"># Files</span> : {{ boxData.incr }}
         </div>
         <div class="float-right">
-            <button class="btn btn-outline-default btn-sm" title="Config"><i class="fa fa-cog"></i></button>
-            <button class="btn btn-outline-danger btn-sm" title="Delete this box"><i class="fa fa-times"></i></button>
+            <button class="btn btn-outline-default btn-sm" title="Config"><em class="fa fa-cog"></em></button>
+            <button class="btn btn-outline-danger btn-sm" title="Delete this box"><em class="fa fa-times"></em></button>
         </div>
     </div>
 </template>

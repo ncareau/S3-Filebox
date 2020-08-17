@@ -4,6 +4,11 @@ This project is in the proof of concept stage. It is missing critical functional
 
 This is a combination of a Frontend made in vuejs and a backend for AWS Serverless Nodejs. It is an application to easily share files using a virtual "box". 
 
+<br/>
+
+![S3-Filebox Demo](demo.gif)
+
+<br/>
 
 ## Installation - WIP
 
